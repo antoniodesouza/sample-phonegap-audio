@@ -5,5 +5,5 @@
 	"description":"Use a PhoneGap media object to record and playback audio. Also detects if a previous recording exists.",
 	"articleurl":"http://software.intel.com/en-us/articles/media-sample-using-phonegap",
 	"categories":["PhoneGap"],
-	"visible" : "true"
+	"visible" : "false"
 }
