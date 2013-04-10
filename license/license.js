@@ -38,37 +38,5 @@ function getPhoneGapPath() {
 
 };
 function loadLicenseTxt() {
-    if (window.device) { // running in PhoneGap
-           var path = getPhoneGapPath();
-        var licFname = path+"README.txt";
-       
-        var readRequest = new XMLHttpRequest();
-        readRequest.open("GET", licFname);
-        readRequest.onreadystatechange = function () {//Call a function when the state changes.
-            if (readRequest.readyState == 4 && readRequest.status == 200) {
-                var divLicense = document.getElementById("licensetext");
-                divLicense.innerText = readRequest.responseText;
-            }
-        }
-        readRequest.send();
-    }  else {
-        // running as web app from Browser, so use iframe to display the README.txt
-        console.log("***Test: read README.txt iframe");
-
-        var licPage = document.getElementById("licensepage");
-        var licEle = document.getElementById("licensetext");
-
-        var frmEle = document.createElement("iframe");
-
-        // Web page 
-        frmEle.setAttribute("src", "license/README.txt");
-
-        frmEle.style.height = window.innerHeight;
-        frmEle.style.width = window.innerWidth;
-
-        licPage.replaceChild(frmEle, licEle);
-
-        frmEle.setAttribute('id', "licensetext");
     }
-}
 
